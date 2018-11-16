@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="PG.js" type="text/javascript" defer></script>
+
+</head>
+<body>
+    <div id="genPass">
+        <label for="password">Password:</label>
+        <input type="text" id="password">
+    </div>
+    <div class="sliderContainer">
+        <input type="range" min="1" max="99" value="6" class="slider" id="size">
+        <label for="size">Size: </label><span id="sizeValue"></span>
+    </div>
+    <div class="options">
+        <input type="checkbox"  id="upper" name="upper">Mayusculas<br>
+        <input type="checkbox" id="lower" name="lower">Minusculas<br>
+        <input type="checkbox"  id="nums" name="nums">Numeros<br>
+        <input type="checkbox"  id="symbols" name="symbols">Simbolos<br>
+    </div>
+    <div>
+        <button type="button" onclick="generatePass()">Generar contraseña</button>
+    </div>
+
+</body>
+</html>
