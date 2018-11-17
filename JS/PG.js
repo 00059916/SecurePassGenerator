@@ -18,7 +18,6 @@ function generatePass() {
     var generatedPass=[];
     for (var i=0;i<passLength;i++)
         generatedPass.push(charPool[passPositions[i]]);
-    console.log(generatedPass.join(''));
     document.getElementById("password").value=generatedPass.join('');
 }
 
@@ -57,4 +56,10 @@ function getRandomInt(min, max) {
     if (byteArray[0] >= Math.floor(max_range / range) * range)
         return getRandomInt(min, max);
     return min + (byteArray[0] % range);
+}
+
+function copyPass() {
+    var copyPass = document.getElementById("password");
+    copyPass.select();
+    document.execCommand("copy");
 }
